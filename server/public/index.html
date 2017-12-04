@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="galleryApp" ng-controller="GalleryController as vm">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weekend Challenge 4</title>
+    <script src="vendors/angular.js"></script>
+    <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="vendors/css/bootstrap.css">
+ 
+</head>
+<body>
+   
+    <div class = 'container-fluid'>
+            <div class="row">
+
+            <h1>Nasir's Gallery!</h1>
+            <h2>{{vm.message}}  </h2>
+
+     <div class="col-sm-6">
+    <img ng-click="showDiv = !showDiv" ng-show="!showDiv" ng-src ="pictures/30203719.jpeg" id="pic 1"/>
+    
+         
+    <div ng-show="showDiv" >
+    This is a picture of me i like it a lot I don't take pictures often so this is very rare collect this  </div>
+
+    <button type="button" class="btn btn-info" ng-click="Liked1 = Liked1 + 1" ng-init="Liked1=0" >
+            Like
+          </button>
+          <span>
+            Liked: {{Liked1}}
+          </span>
+        </div>
+
+        <div class="col-sm-6">
+    <img id="pic2" ng-click="showDiv2 = !showDiv2" ng-show="!showDiv2" ng-src="pictures/union_jack.png"/>
+    <div ng-show="showDiv2" >
+    Since 2009 I have been living in the city of London, England during the summers with my father  </div>
+    <button type="button" class="btn btn-info" ng-click="Liked2 = Liked2 + 1" ng-init="Liked2=0">
+            Like
+          </button>
+          <span>
+            Liked: {{Liked2}}
+          </span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+        <div class="col-sm-6">
+
+     <img ng-src="pictures/terrykennedy.jpg" id="pic3" ng-click= "showDiv3 = !showDiv3" ng-show="!showDiv3"  >
+        <div ng-show="showDiv3" >
+            Skating is one of my biggest passions I've skated since I was 14, here is a cover of thrasher skating mag with my favorite skate Terry Kennedy on the cover  </div>
+            <button type="button" class="btn btn-info" ng-click="Liked3 = Liked3 + 1" ng-init="Liked3=0"> 
+                    Like
+                  </button>
+                  <span>
+                    Liked: {{Liked3}}
+                  </span>
+                </div>
+                <div class="col-sm-6">
+            <img ng-src="pictures/kidcudi.jpg" ng-click= "showDiv4 = !showDiv4" ng-show="!showDiv4" id="pic4" >
+            <div ng-show="showDiv4" >
+                Here is a picture of my favorite album Kid Cud's debut album Man On The Moon </div>
+                <button type="button" class="btn btn-info" ng-click="Liked4 = Liked4 + 1" ng-init="Liked4=0"> 
+                        Like
+                      </button>
+                      <span>
+                        Liked: {{Liked4}}
+                      </span>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                            <div class="col-sm-6">    
+             <img ng-src="pictures/bebop.jpg" ng-click= "showDiv5 = !showDiv5" ng-show="!showDiv5" id="pic5">
+             <div ng-show="showDiv5" >
+                    Cowboy Bebop is my favorite TV show/ anime of all time I am a huge nerd I even have a cowboy bebop sticker on my laptop </div>
+                    <button type="button" class="btn btn-info" ng-click="Liked5 = Liked5 + 1" ng-init="Liked5=0"> 
+                            Like
+                          </button>
+                          <span>
+                            Liked: {{Liked5}}
+                          </span>
+                            </div>
+    
+                            <div class="col-sm-6">   
+            <img ng-src="pictures/ableton.png" ng-click= "showDiv6 = !showDiv6" ng-show="!showDiv6" id="pic6">
+            <div ng-show="showDiv6" >
+                    Ableton is the program I use to produce music, I've been producing music since I was in highschool. I used a picture as a placeholder for my love of music the actual application actually drives me nuts because of how frequnt it crashes  </div>
+
+                    <button type="button" class="btn btn-info" ng-click="Liked6 = Liked6 + 1" ng-init="Liked6=0"> 
+                            Like
+                          </button>
+                          <span>
+                            Liked: {{Liked6}}
+                          </span>
+                    </div>
+                    </div>
+                    
+    
+                    
+
+
+<div>
+</body>
+</html>
